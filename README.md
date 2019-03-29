@@ -17,3 +17,7 @@ Sample dataset to test (git-lfs?)
 
 Initial version adapted from
 https://github.com/jiangwenwen1231/FB_UTE_Recon
+
+
+References
+https://doi.org/10.1002/mrm.26958
