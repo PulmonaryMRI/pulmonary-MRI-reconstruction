@@ -11,7 +11,7 @@ dcf = readcfl([rootfname '_dcf']);
 
 % bellows data and temporal mapping
 resp = readcfl([rootfname '_resp']);
-time = readcfl([rootfname '_resptime']);
+time = readcfl([rootfname '_time']);
 
 [stime,order] = sort(time);
 

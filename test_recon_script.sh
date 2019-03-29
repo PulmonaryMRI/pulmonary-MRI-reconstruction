@@ -10,11 +10,15 @@ export DEBUG_LEVEL=5
 set -x
 
 in="test_data"
-# Inputs (cfl files) - separate script example to generate?
-# raw data
-# k-space trajectory
-# density compensation function
-# motion estimation - data weighting
+# Inputs needed (cfl files)
+# raw data _data
+# k-space trajectory _traj
+# density compensation function _dcf
+# respiratory bellows (optional?) _resp
+# sampling times _time
+
+
+# compute k0 navigator, assign soft-gating weights and bin data
 matlab -nodesktop -nosplash -r "ute_data_weighting('"$in"');quit;"
 
 # image navigator
