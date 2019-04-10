@@ -11,9 +11,10 @@ dcf = readcfl([rootfname '_dcf']);
 
 % bellows data and temporal mapping
 resp = readcfl([rootfname '_resp']);
-time = readcfl([rootfname '_time']);
+% time = readcfl([rootfname '_time']);
 
-[stime,order] = sort(time);
+% [stime,order] = sort(time);
+order = 1:length(resp);
 
 resp_ordered = resp(order);
 resp_ordered_normalized = -(resp_ordered-mean(resp_ordered))/std(resp_ordered);
@@ -35,15 +36,19 @@ if do_soft
 sg_ordered = ute_soft(gate_ordered); % ute_gui( gate_ordered ,resp_ordered_normalized);  % ute_gui missing
     sg(order) = sg_ordered;
     sgdcf = dcf .* repmat( reshape( sg, [1, 1, size(data,3), 1, 1] ), [1, size(data,2), 1, 1, 1] );
-writecfl([rootfname,'_sg_dcf'],sgdcf);
+writecfl([rootfname,'_sg_dcf'],sqrt(sgdcf));
 end
 
 %% Binning
 if hard_Nbins
 [bin_data, bin_traj, bin_dcf] = ute_binning( gate, hard_Nbins, data, traj, dcf );
     
-    writecfl([outfname, '_b', int2str(hard_Nbins), '_data'], bin_data);
-    writecfl([outfname, '_b', int2str(hard_Nbins) , '_traj'], bin_traj);
-    writecfl([outfname, '_b', int2str(hard_Nbins), '_dcf'], bin_dcf);
+    %writecfl([rootfname, '_b', int2str(hard_Nbins), '_data'], bin_data);
+    %writecfl([rootfname, '_b', int2str(hard_Nbins) , '_traj'], bin_traj);
+    %writecfl([rootfname, '_b', int2str(hard_Nbins), '_dcf'], sqrt(bin_dcf));% iter requires sqrt(dcf)
+
+    writecfl([rootfname, '_datam'], bin_data);
+    writecfl([rootfname, '_trajm'], bin_traj);
+    writecfl([rootfname, '_dcfm'], sqrt(bin_dcf));% iter requires
 end
 

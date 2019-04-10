@@ -12,6 +12,8 @@ data = readcfl([rootfname '_data']);
 traj = readcfl([rootfname '_traj']);
 dcf = readcfl([rootfname '_dcf']);
 
+
+
 ncoils = size(data,4);
 
 res = [];
