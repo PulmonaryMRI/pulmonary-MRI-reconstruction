@@ -2,11 +2,11 @@
 Tools for reconstructing Pulmonary MRI datasets to manage motion
 
 Requires BART https://mrirecon.github.io/bart/
-version ?? https://github.com/mrirecon/bart/releases/
+Sample data has been tested with BART v.0.4.00, please install version later than that https://github.com/mrirecon/bart/releases/
 
 Requries MATLAB
 
-Typically requires LOTS of RAM
+Typically requires 100GB RAM, for 256*256*256 matrix size, 8 channel, 4 motion phase.
 
 Current features being built in
 Supports center-out k-space trajectories (e.g. UTE with radial, cones)
