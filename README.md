@@ -2,7 +2,9 @@
 Tools for reconstructing Pulmonary MRI datasets to manage motion
 
 Requires BART https://mrirecon.github.io/bart/
-Sample data has been tested with BART v.0.4.00, please install version later than that https://github.com/mrirecon/bart/releases/
+
+Sample data has been tested with BART v.0.4.00, please install version later than v.0.4.00
+https://github.com/mrirecon/bart/releases/
 
 Requries MATLAB
 
