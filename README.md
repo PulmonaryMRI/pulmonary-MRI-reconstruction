@@ -15,7 +15,10 @@ Supports center-out k-space trajectories (e.g. UTE with radial, cones)
 Soft-gating reconstruction
 Motion-resolved reconstruction
 Dynamic Image Navigator reconstruction
-Sample dataset to test (git-lfs?)
+
+
+An anonymized sample dataset from a volunteer is available on request to test out the methods - please contact peder.larson@ucsf.edu to get a link
+
 
 Initial version adapted from
 https://github.com/jiangwenwen1231/FB_UTE_Recon
